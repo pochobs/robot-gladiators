@@ -7,8 +7,9 @@ var enemyNames = "Roborto";
 var enemyHealth = 50;
 var enemyAttack = 12;   
     console.log(enemyNames, enemyHealth, enemyAttack);
-var fight = function() {
     window.alert("Welcome " +  playerName + " to Robot Gladiators!")
+var fight = function() {
+    
     window.alert("The fight has begun!");
     enemyHealth = enemyHealth - playerAttack;
     console.log(
@@ -22,6 +23,14 @@ var fight = function() {
     window.alert(
         enemyNames + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
       );
+      if (playerHealth <= 0) {
+        console.log(" Your robot died");
+        window.alert(" Your robot died");
+      } 
+      else {
+        console.log("Your player is still alive!");      
+        window.alert("Your player is still alive!");}
+
       
     
   
