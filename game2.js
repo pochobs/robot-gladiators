@@ -18,33 +18,31 @@ var enemyAttack = 12;
         window.alert("The fight has begun!");  
         enemyHealth = enemyHealth - playerAttack;
         playerHealth = playerHealth - enemyAttack;
-        // remove enemy's health by subtracting the amount set in the playerAttack variable              
         console.log(playerName + " attacked " + enemyNames + ". " + enemyNames + " now has " + enemyHealth + " health remaining."
-            );
-            window.alert(playerName + " attacked " + enemyNames + ". " + enemyNames + " now has " + enemyHealth + " health remaining.");
+        );
+        window.alert(playerName + " attacked " + enemyNames + ". " + enemyNames + " now has " + enemyHealth + " health remaining.");
             if (enemyHealth <= 0) {
                 console.log(enemyNames + " has died!");
                 window.alert(enemyNames + " has died!");
             } else {
                 console.log(enemyNames + " still has " + enemyHealth + " health left.");
                 window.alert(enemyNames + " still has " + enemyHealth + " health left.");
-               // 
-              }
-                            
-            console.log(
-            enemyNames + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
-            );
-            window.alert(
-            enemyNames + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
-            );
+            }
+        console.log(
+        enemyNames + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
+        );
+        window.alert(
+        enemyNames + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
+        );
             
-            if (playerHealth <= 0) {
-                    console.log(" Your robot died");
-                    window.alert(" Your robot died");
-             } else {
-                    console.log("Your player is still alive!");      
-                    window.alert("Your player is still alive!");  
-                    fight();
+        if (playerHealth <= 0) {
+                console.log(" Your robot died");
+                window.alert(" Your robot died");
+        } 
+        else {
+                console.log("Your player is still alive!");      
+                window.alert("Your player is still alive!");  
+                fight();
                 }    
         }
     else if (promptFight === "skip" || promptFight === "SKIP") {
@@ -65,9 +63,9 @@ var enemyAttack = 12;
             else {
                 fight();
             }
-        }
+    }
     else {
-                 window.alert("You need to pick a valid option. Try again!");
+        window.alert("You need to pick a valid option. Try again!");
     }
         }
 for(var i = 0; i < enemyNames.length; i++) {
