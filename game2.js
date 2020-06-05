@@ -5,7 +5,7 @@ var playerMoney = 10;
     console.log(playerName, playerHealth, playerAttack, playerMoney);
 var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 for(var i = 0; i < enemyNames.length; i++) {
-    console.log(enemyNames[i]);
+    console.log(enemyNames[i], enemyHealth, enemyAttack);
   }
 var enemyHealth = 50;
 var enemyAttack = 12;   
@@ -53,12 +53,13 @@ var enemyAttack = 12;
 
   // if yes (true), leave fight
             if (confirmSkip) {
-                window.alert(playerName + " has decided to skip this fight. Goodbye!");
-                console.log(playerName + " has decided to skip this fight. Goodbye!");
+                
     // subtract money from playerMoney for skipping
                 playerMoney = playerMoney - 2;
-                window.alert(playerName + " has now remaing $ " + playerMoney);
+                window.alert(playerName s+ " has now remaing $ " + playerMoney);
                 console.log(playerName + " has now remaing $ " + playerMoney);
+                window.alert(playerName + " has decided to skip this fight. Goodbye!");
+                console.log(playerName + " has decided to skip this fight. Goodbye!");
             }  
   // if no (false), ask question again by running fight() again
             else {
