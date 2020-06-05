@@ -4,7 +4,7 @@ var playerAttack = 10;
 var playerMoney = 10;
     console.log(playerName, playerHealth, playerAttack, playerMoney);
 var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
-for(var i = 0; i < enemyNames.3 i++) {
+for(var i = 0; i < enemyNames.length; i++) {
     console.log(enemyNames[i]);
   }
 var enemyHealth = 50;
