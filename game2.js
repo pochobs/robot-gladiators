@@ -17,7 +17,7 @@ var enemyAttack = 12;
         
           // place fight function code block here . . .
         for(var i = 0; i < enemyNames.length; i++) {
-            while(enemyHealth > 0) {
+            while(enemyHealth  > 0 && playerMoney  > 0 && playerHealth > 0) {
             promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
             if (promptFight === "fight" || promptFight === "FIGHT") {
                 window.alert("The fight has begun!");  
@@ -31,6 +31,7 @@ var enemyAttack = 12;
                     if (enemyHealth <= 0) {
                         console.log(enemyNames + " has died!");
                         window.alert(enemyNames + " has died!");
+                        break;
                     } 
                     else {
                         console.log(enemyNames + " still has " + enemyHealth + " health left.");
@@ -46,6 +47,7 @@ var enemyAttack = 12;
                     if (playerHealth <= 0) {
                             console.log(" Your robot died");
                             window.alert(" Your robot died");
+                            break;
                     } 
                     else {
                             console.log("Your player is still alive!");      
