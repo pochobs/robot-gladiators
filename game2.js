@@ -5,38 +5,35 @@ var playerMoney = 10;
     console.log(playerName, playerHealth, playerAttack, playerMoney);
     
 var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
-  console.log(enemyNames[0], enemyNames[1], enemyNames[2]);
-for(var i = 0; i < enemyNames.length; i++) {
-    console.log(enemyNames[i]);
-    console.log(i);
-    console.log(enemyNames[i] + " is at " + i + " index");
-  }
-var enemyRobot = enemyNames[i];
-
+    console.log(enemyNames[0], enemyNames[1], enemyNames[2]);
+    console.log(enemyNames.length)
 var enemyHealth = 50;
 var enemyAttack = 12;   
     window.alert("Welcome " +  playerName + " to Robot Gladiators!")
     console.log(enemyNames, enemyHealth, enemyAttack);
     
-    var fight = function(enemyNames) {
+        var fight = function(enemyNames) {
         // repeat and execute as long as the enemy robot is alive 
-        while(enemyHealth > 0) {
-          // place fight function code block here . . .
         
+          // place fight function code block here . . .
+        for(var i = 0; i < enemyNames.length; i++) {
+            while(enemyHealth > 0) {
             promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
             if (promptFight === "fight" || promptFight === "FIGHT") {
                 window.alert("The fight has begun!");  
                 enemyHealth = enemyHealth - playerAttack;
                 playerHealth = playerHealth - enemyAttack;
-                console.log(playerName + " attacked " + enemyRobot + ". " + enemyRobot + " now has " + enemyHealth + " health remaining."
+                
+                
+                console.log(playerName + " attacked " + enemyNames + ". " + enemyNames + " now has " + enemyHealth + " health remaining."
                 );
-                window.alert(playerName + " attacked " + enemyRobot + ". " + enemyRobot + " now has " + enemyHealth + " health remaining.");
+                window.alert(playerName + " attacked " + enemyNames + ". " + enemyNames + " now has " + enemyHealth + " health remaining.");
                     if (enemyHealth <= 0) {
                         console.log(enemyNames + " has died!");
                         window.alert(enemyNames + " has died!");
                     } 
                     else {
-                        console.log(enemyRobot + " still has " + enemyHealth + " health left.");
+                        console.log(enemyNames + " still has " + enemyHealth + " health left.");
                         
                     }
                 console.log(
@@ -54,7 +51,7 @@ var enemyAttack = 12;
                             console.log("Your player is still alive!");      
                             window.alert("Your player is still alive!"); 
                             
-                           // fight();
+                           fight(enemyNames);
                             
                     }    
             }
@@ -79,8 +76,13 @@ var enemyAttack = 12;
                 window.alert("You need to pick a valid option. Try again!");
             }
         }
-    }
+        }
+    
+    
+}
         
         
-            fight();
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+  }
        
