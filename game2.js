@@ -64,14 +64,16 @@ var enemyAttack = 12;
                  // if yes (true), leave fight
                     if (confirmSkip) {
                         
+                        
             // subtract money from playerMoney for skipping
                         playerMoney = playerMoney - 2;
                         window.alert(playerName + " has now remaing $ " +  playerMoney  + ". " + playerName + " has decided to skip this fight. Goodbye!");
                         console.log(playerName + " has now remaing $ " +  playerMoney  + ". " + playerName + " has decided to skip this fight. Goodbye!");
-                   }  
+                        break;
+                    }  
                          // if no (false), ask question again by running fight() again
                     else {
-                        fight();
+                        fight(enemyNames);
                     }
             }
             else {
