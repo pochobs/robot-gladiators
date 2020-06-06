@@ -54,7 +54,7 @@ var enemyAttack = 12;
                             console.log("Your player is still alive!");      
                             window.alert("Your player is still alive!"); 
                             
-                            fight();
+                           // fight();
                             
                     }    
             }
